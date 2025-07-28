@@ -99,9 +99,7 @@ export default function LayerEditor({ onExport }) {
           <select
             style={{ padding: '0.4rem 0.6rem', fontSize: '1rem', borderRadius: 6, border: '1px solid #ccc' }}
             value={selected[layer]}
-            onChange={(e) =>
-              setSelected((prev) => ({ ...prev, [layer]: e.target.value }))
-            }
+            onChange={(e) => setSelected(prev => ({ ...prev, [layer]: e.target.value }))}
           >
             {layers[layer].map((file) => (
               <option key={file} value={file}>
